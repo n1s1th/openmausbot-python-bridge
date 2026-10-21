@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://openmausbot-python-mcp-bridge.copperpearl.chatgpt.site/sitemap.xml
