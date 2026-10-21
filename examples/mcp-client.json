@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "openmausbot-python": {
+      "command": "C:/path/to/openmausbot-python-bridge/.venv/Scripts/python.exe",
+      "args": ["C:/path/to/openmausbot-python-bridge/bridge.py"],
+      "env": {"OPENMAUSBOT_URL": "http://127.0.0.1:8799"}
+    }
+  }
+}
