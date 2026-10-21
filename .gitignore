@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.log
+profiles/
+config.yml
+*.pem
+*.key
+dist/
+build/
+*.egg-info/
