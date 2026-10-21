@@ -1,8 +1,23 @@
-# OpenMausBot Python MCP Bridge
+# OpenMausBot Python MCP Bridge — Connect OpenMausBot to ChatGPT
 
 Connect a local OpenMausBot installation to MCP clients using Python and FastMCP.
 For ChatGPT, use a private OpenAI Secure MCP Tunnel. The bridge opens no HTTP listener
 and enables read tools by default.
+
+**[Documentation website](https://openmausbot-python-mcp-bridge.copperpearl.chatgpt.site/)** ·
+**[Windows installation](https://openmausbot-python-mcp-bridge.copperpearl.chatgpt.site/installation.html)** ·
+**[ChatGPT integration guide](https://openmausbot-python-mcp-bridge.copperpearl.chatgpt.site/chatgpt.html)** ·
+**[FAQ](docs/faq.md)**
+
+## What is this OpenMausBot ChatGPT integration?
+
+This open-source Python **Model Context Protocol (MCP)** bridge connects the installed
+OpenMausBot vendor MCP server to ChatGPT through a private OpenAI Secure MCP Tunnel,
+or directly to a local MCP client over stdio. Use it to check server health, list bots
+and channels, and inspect tasks or messages. Twelve action tools are available only
+with explicit opt-in. The bridge itself needs no OpenAI API key and exposes no HTTP port.
+
+This repository contains the bridge, not the OpenMausBot application or tunnel client.
 
 ```text
 ChatGPT → Secure MCP Tunnel → Python FastMCP bridge → vendor mcp-server.js → OpenMausBot
@@ -140,3 +155,17 @@ HTTPS/OAuth deployment is included.
 The second command includes the live integration test. GitHub Actions runs only the
 portable unit tests. See [verification notes](docs/verification.md). MIT licensed;
 third-party applications and dependencies retain their own licenses.
+
+## Documentation website and project discovery
+
+The public [OpenMausBot MCP documentation](https://openmausbot-python-mcp-bridge.copperpearl.chatgpt.site/)
+contains installation, ChatGPT setup, troubleshooting, security and FAQ pages. Source
+is in `website/build_site.py`, with the static output in `website/dist/`.
+
+Rebuild locally with `python website/build_site.py website/dist`, then preview with
+`python -m http.server 8000 --directory website/dist`. Publishing the GitHub files does
+not automatically deploy the separately hosted documentation site.
+
+See [discovery and indexing maintenance](docs/discoverability.md) for repository
+metadata, Search Console setup and sitemap submission. Search rankings, indexing and
+AI recommendations are determined by the relevant services and are not guaranteed.
